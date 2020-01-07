@@ -9,7 +9,12 @@ public class Encryptor {
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String output ="";
+          String [] words = phrase.split(" ");
+          for (String word: words) {
+              output += word.toUpperCase().charAt(0);
+          }
+          return output;
       }
 
       /**
@@ -25,6 +30,15 @@ public class Encryptor {
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          String output = "";
+          for (char ch: word.toCharArray()) {
+              switch ((int)(ch)){
+                  case 120 : output += (char)(97); break;
+                  case 121 : output += (char)(98); break;
+                  case 122 : output += (char)(99); break;
+                  default : output += (char)(ch + 3);
+              }
+          }
+          return output;
       }
 }

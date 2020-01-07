@@ -1,7 +1,5 @@
 package com.github.perschola;
 
-import java.util.stream.LongStream;
-
 public class MathUtilities {
 
     /**
@@ -12,7 +10,11 @@ public class MathUtilities {
      * @return the factorial of the number
      */
     public Integer factorial(Integer number) {
-        return null;
+        Integer total = 1;
+        for (int i = number; i > 0; i--){
+            total *= i;
+        }
+        return total;
     }
 
     /**
@@ -23,7 +25,7 @@ public class MathUtilities {
      * @return the sum of the two numbers
      */
     public Integer add(Integer baseValue, Integer valueToAdd) {
-        return null;
+        return baseValue + valueToAdd;
     }
 
     /**
@@ -34,7 +36,7 @@ public class MathUtilities {
      * @return the sum of the two numbers
      */
     public Double add(Double baseValue, Double valueToAdd) {
-        return null;
+        return baseValue + valueToAdd;
     }
 
     /**
@@ -44,7 +46,7 @@ public class MathUtilities {
      * @return the half of the number in double
      */
     public Double half(Integer number) {
-        return null;
+        return number / 2.0;
     }
 
     /**
@@ -54,7 +56,7 @@ public class MathUtilities {
      * @return true if the number is odd, false if it is even
      */
     public Boolean isOdd(Integer number) {
-        return null;
+        return number % 2 == 0;
     }
 
 
@@ -65,7 +67,7 @@ public class MathUtilities {
      * @return the result of the number multiply by itself
      */
     public Integer square(Integer number) {
-        return null;
+        return number * number;
     }
 
 }
